@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="./Styles/commonStyles.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="database.html">Dashboard</a></div>
+      <div><a href="buy-list.html">My Books</a></div>
+      <div><a href="bookmark-list.html">Bookmark</a></div>
+    </div>
+
+    <div id="filterdiv">
+      <label>Filter by: Book category </label>
+      <select id="Filtertag" onchange="handleFilter()">
+          <option value="all">All</option>
+          <option value="sports">sports</option>
+          <option value="fiction">fiction</option>
+          <option value="finance">finance</option>
+          <option value="Education">Education</option>
+     </select>
+  </div>
+
+  <div><label >Sort by: Price</label>
+    <select id="sorter" onchange="sortByPrice()">
+     <option value="">Price</option>
+        <option value="l2h">Low To High</option>
+        <option value="h2l">High to Low</option>
+        
+   </select>
+</div>
+    <main>
+      <table border="7">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Auther</th>
+            <th>Description</th>
+            <th>Added Date</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Buy</th>
+            <th>Bookmark</th>
+          </tr>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
+    </main>
+  </body>
+  <script src="./Script/database.js"></script>
+</html>
