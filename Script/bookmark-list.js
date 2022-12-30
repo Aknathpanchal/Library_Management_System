@@ -1,6 +1,5 @@
 var datas=JSON.parse(localStorage.getItem("bookmark-list"))||[];
 var booklist=JSON.parse(localStorage.getItem("book-list"))||[];
-
 datas.map(function(elem,i){
     var row=document.createElement("tr")
     var data1=document.createElement("td")
